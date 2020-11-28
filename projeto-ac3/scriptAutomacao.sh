@@ -1,11 +1,12 @@
 #!/bin/bash
 
-echo "Script de automação!"
+echo "Verificando se possue java"
 
 which java | grep -q /urs/bin/java
 
 if [[ $? = 0 ]]
 	then
+	echo "OK"
 	echo "Executando arquivo java"
 	java -jar projeto-ac3-1.0-SNAPSHOT-jar-with-dependencies.jar
 else	
@@ -16,7 +17,7 @@ else
 	source "$HOME/.sdkman/bin/sdkman-init.sh"
 	sdk install java 8.0.272.j9-adpt
 	echo "Executando o java"
-	java -jar projeto-ac3-1.0-SNAPSHOT-jar-with-dependencies.jar 	
+	java -jar projeto-ac3-1.0-SNAPSHOT-jar-with-dependencies.jar	 	
 fi
 
 
