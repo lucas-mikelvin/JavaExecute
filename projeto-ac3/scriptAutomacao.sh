@@ -2,7 +2,7 @@
 
 echo "Verificando se possue java"
 
-java -version
+which java | grep -q /usr/bin/java
 
 if [[ $? = 0 ]]
 	then
