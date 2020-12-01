@@ -12,7 +12,7 @@ if [[ $? = 0 ]]
 else	
 	echo "Java não encontrado"
 	echo "Instalando o java"
-	sudo apt install curl
+	sudo apt install zip
 	curl -s "https://get.sdkman.io" | bash
 	source "$HOME/.sdkman/bin/sdkman-init.sh"
 	sdk install java 8.0.272.j9-adpt
